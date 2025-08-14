@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - مدونتي العربية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>لوحة التحكم - مدونتي العربية</h1>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="#" onclick="logout()">تسجيل الخروج</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="admin-panel">
+            <div class="container">
+                <h2>لوحة التحكم</h2>
+                <div class="admin-stats">
+                    <div class="stat-card">
+                        <h3>عدد المقالات</h3>
+                        <span id="posts-count">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>آخر تحديث</h3>
+                        <span id="last-update">-</span>
+                    </div>
+                </div>
+                <div class="admin-actions">
+                    <button class="btn-primary" onclick="showAddPost()">+ إضافة مقال جديد</button>
+                    <button class="btn-secondary" onclick="exportPosts()">تصدير المقالات</button>
+                    <button class="btn-secondary" onclick="importPosts()">استيراد المقالات</button>
+                </div>
+                <div id="posts-list"></div>
+            </div>
+        </section>
+
+        <!-- نموذج إضافة/تعديل مقال -->
+        <div id="post-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">إضافة مقال جديد</h2>
+                <form id="admin-post-form">
+                    <input type="hidden" id="post-id">
+                    <div class="form-group">
+                        <label for="admin-title">عنوان المقال:</label>
+                        <input type="text" id="admin-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-summary">ملخص المقال:</label>
+                        <textarea id="admin-summary" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-content">محتوى المقال:</label>
+                        <textarea id="admin-content" rows="10" required></textarea>
+                        <small>يمكنك استخدام HTML tags: &lt;p&gt;, &lt;h3&gt;, &lt;ul&gt;, &lt;li&gt;، إلخ</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-date">التاريخ:</label>
+                        <input type="date" id="admin-date" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">حفظ المقال</button>
+                        <button type="button" class="btn-secondary" onclick="closeModal()">إلغاء</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="js/admin.js"></script>
+</body>
+</html>
