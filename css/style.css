@@ -1,0 +1,65 @@
+/* الأنماط الأساسية للمدونة */
+body {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #667eea;
+    color: white;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* المقالات */
+.post-preview {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+.post-preview h3 {
+    margin-top: 0;
+}
+
+.post-content {
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+
+.post-content img,
+.post-content iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 1rem auto;
+}

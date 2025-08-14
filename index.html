@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مدونتي العربية</title>
+    <meta name="description" content="مدونة شخصية لمشاركة المحتوى العربي">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,20 +16,38 @@
             <div class="container">
                 <h1>مدونتي العربية</h1>
                 <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="admin.html">لوحة التحكم</a></li>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">عني</a></li>
+                    <li><a href="#contact">تواصل</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
     <main>
+        <section id="hero">
+            <div class="container">
+                <h2>مرحباً بكم في مدونتي</h2>
+                <p>أشارك هنا أفكاري وتجاربي باللغة العربية</p>
+            </div>
+        </section>
+
         <section id="blog-posts">
             <div class="container">
                 <h2>أحدث المقالات</h2>
-                <div id="public-posts-list"></div>
+                <div id="posts-container">
+                    <!-- Posts will be loaded here -->
+                </div>
             </div>
         </section>
     </main>
-    <script src="js/admin.js"></script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 مدونتي العربية. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="js/blog.js"></script>
 </body>
 </html>
